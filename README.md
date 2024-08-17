@@ -56,7 +56,7 @@ This will run all the test cases defined in the `TestStringMethods` class.
 - Complex numbers are represented as lists with two elements: `[real_part, imaginary_part]`.
 - Results are rounded to 4 decimal places for precision.
 - The project uses the `math` module for trigonometric functions and other mathematical operations.
-- Input format for complex numbers: `a+bi` (e.g., `3+4i`)
+- Input format for complex numbers `a+bi`: `a,b` (e.g., `3,-4`)
 
 ## Functions
 

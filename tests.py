@@ -10,6 +10,7 @@ from main import cartesian2polar
 from main import polar2cartesian
 from main import phase
 from main import subtraction
+from main import inputComplex
 
 class TestStringMethods(unittest.TestCase):
     def testDivision(self):
@@ -47,6 +48,11 @@ class TestStringMethods(unittest.TestCase):
     def testSubtraction(self):
         self.assertEqual(subtraction([3,-6],[5,7]),[-2,-13])
         self.assertTrue(type([]),type(subtraction([3,-6],[5,7])))
+
+    def testInputComplex(self):
+        self.assertEqual(inputComplex('3,4'),[3,4])
+        self.assertEqual(inputComplex('-3,-4'),[-3,-4])
+        self.assertEqual(inputComplex('  - 3.5 , -  4.7 '),[-3.5,-4.7])
 
 if __name__ == '__main__':
     unittest.main()

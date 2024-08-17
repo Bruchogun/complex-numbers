@@ -1,15 +1,21 @@
 import math
-def inputComplex():
-    userInput = input('Ingrese un complejo: ')
-    userInput = userInput.split('+')
-    userInput[1] = userInput[1].replace('i','')
-    complex = [float(userInput[0]),float(userInput[1])]
-    return complex
+def inputComplex(user_input):
+  while True:
+      if user_input:
+        user_input = user_input.replace(' ', '').split(',')
+      else:
+        user_input = input('Enter a complex number (e.g., 1+2i): ').replace(' ', '').split(',')
+      real = float(user_input[0]) 
+      imag = float(user_input[1]) 
+      return [real, imag]
 
 def division(complexA,complexB):
-  resultReal = round((complexA[0]*complexB[0] + complexA[1]*complexB[1]) / (complexB[0]**2 + complexB[1]**2),4)
-  resultImg = round((complexA[1]*complexB[0] - complexA[0]*complexB[1]) / (complexB[0]**2 + complexB[1]**2),4)
-  return [resultReal,resultImg]
+  try:
+    resultReal = round((complexA[0]*complexB[0] + complexA[1]*complexB[1]) / (complexB[0]**2 + complexB[1]**2),4)
+    resultImg = round((complexA[1]*complexB[0] - complexA[0]*complexB[1]) / (complexB[0]**2 + complexB[1]**2),4)
+    return [resultReal,resultImg]
+  except ZeroDivisionError:
+    return 'No se puede dividir por 0'
 
 def addition(complexA,complexB):
   resultReal = round(complexA[0] + complexB[0],4)
