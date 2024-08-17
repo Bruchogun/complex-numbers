@@ -83,11 +83,11 @@ print(polar)  # Output: [6.7082, -1.1071]
 
 ## Author
 
-* Mauro D'Agostini - [https://github.com/Bruchogun](Bruchogun)
+* Mauro D'Agostini - [Bruchogun](https://github.com/Bruchogun)
 
 ## License
 
-This project is licensed under the MIT - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
