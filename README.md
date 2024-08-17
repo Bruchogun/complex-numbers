@@ -1,81 +1,94 @@
-# Complex Number Operations
+# Complex Number Calculator
 
-This Python project provides a set of functions to perform various operations on complex numbers. It includes a main script with the implementation of these operations and a test script to verify the correctness of the functions.
+This project implements a complex number calculator in Python, providing various operations and conversions for complex numbers.
 
-## Files
+## Getting Started
 
-1. `main.py`: Contains the main implementation of complex number operations.
-2. `tests.py`: Includes unit tests for the functions defined in `main.py`.
+These instructions will help you set up the project on your local machine for development and testing purposes.
+
+### Prerequisites
+
+To run this project, you need:
+
+- Python 3.x
+
+### Installing
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+
+No additional installation steps are required as the project uses Python's standard library.
 
 ## Features
 
-The project supports the following operations on complex numbers:
+The complex number calculator supports the following operations:
 
-- Input of complex numbers
+- Input complex numbers
 - Addition
 - Subtraction
 - Multiplication
 - Division
-- Calculation of modulus
+- Calculating the module
+- Finding the conjugate
+- Converting between Cartesian and polar coordinates
+- Calculating the phase
+
+## Running the tests
+
+The project includes a comprehensive test suite. To run the automated tests:
+
+1. Navigate to the project directory.
+2. Run the following command:
+
+```
+python -m unittest tests.py
+```
+
+### Test breakdown
+
+The tests cover all the main functionalities of the complex number calculator:
+
+- Division
+- Addition
+- Multiplication
+- Module calculation
 - Conjugate
-- Conversion between Cartesian and Polar coordinates
+- Cartesian to polar conversion
+- Polar to Cartesian conversion
 - Phase calculation
+- Subtraction
+- Complex number input parsing
+
+Each test checks both the correctness of the result and the expected return type.
 
 ## Usage
 
-To use this project, you can import the functions from `main.py` into your own Python script. Here's an example of how to use some of the functions:
+To use the complex number calculator, import the desired functions from `main.py`. For example:
 
 ```python
-from main import inputComplex, addition, multiplication, prettyPrinting
-
-# Input two complex numbers
-complex1 = inputComplex()
-complex2 = inputComplex()
+from main import addition, multiplication, cartesian2polar
 
 # Perform operations
-sum_result = addition(complex1, complex2)
-product_result = multiplication(complex1, complex2)
+result = addition([3, -6], [5, 7])
+print(result)  # Output: [8, 1]
 
-# Display results
-prettyPrinting("Sum:", sum_result)
-prettyPrinting("Product:", product_result)
+# Convert to polar coordinates
+polar = cartesian2polar([3, -6])
+print(polar)  # Output: [6.7082, -1.1071]
 ```
 
-## Testing
+## Built With
 
-To run the unit tests, execute the `tests.py` script:
+* Python 3.x - The programming language used
 
-```
-python tests.py
-```
+## Author
 
-This will run all the test cases defined in the `TestStringMethods` class.
-
-## Implementation Details
-
-- Complex numbers are represented as lists with two elements: `[real_part, imaginary_part]`.
-- Results are rounded to 4 decimal places for precision.
-- The project uses the `math` module for trigonometric functions and other mathematical operations.
-- Input format for complex numbers `a+bi`: `a,b` (e.g., `3,-4`)
-
-## Functions
-
-- `inputComplex()`: Prompts user to input a complex number
-- `division(complexA, complexB)`: Divides two complex numbers
-- `addition(complexA, complexB)`: Adds two complex numbers
-- `multiplication(complexA, complexB)`: Multiplies two complex numbers
-- `module(complex)`: Calculates the modulus of a complex number
-- `conjugate(complex)`: Returns the conjugate of a complex number
-- `cartesian2polar(complex)`: Converts from Cartesian to Polar coordinates
-- `polar2cartesian(complex)`: Converts from Polar to Cartesian coordinates
-- `phase(complex)`: Calculates the phase of a complex number
-- `subtraction(complexA, complexB)`: Subtracts two complex numbers
-- `prettyPrinting(label, data)`: Prints complex numbers in a readable format
-
-## Contributing
-
-Feel free to fork this project and submit pull requests for any improvements or additional features you'd like to add.
+* Mauro D'Agostini - [https://github.com/Bruchogun](Bruchogun)
 
 ## License
 
-MIT
+This project is licensed under the MIT - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+* Inspiration from complex number theory and applications (wink wink).
